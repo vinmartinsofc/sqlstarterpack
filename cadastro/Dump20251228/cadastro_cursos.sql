@@ -21,6 +21,11 @@ USE `cadastro`;
 -- Table structure for table `cursos`
 --
 
+CREATE DATABASE cadastro
+DEFAULT CHARSET utf8mb4
+DEFAULT COLLATE utf8mb4_general_ci;
+
+
 DROP TABLE IF EXISTS `cursos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
