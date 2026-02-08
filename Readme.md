@@ -1,4 +1,4 @@
-## \# MySQL Practice Starter Pack
+## \# Database Practice Starter Pack
 
 # 
 
