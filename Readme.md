@@ -9,45 +9,6 @@ Este repositório é um \*\*pacote centralizado de estudos e práticas com banco
 Aqui estão armazenados \*\*dumps de bancos de dados\*\* utilizados em exercícios práticos, testes de modelagem, consultas SQL, relacionamentos e simulações de cenários reais.
 
 
-
-##### \## 📂 Estrutura do Projeto
-
-
-
-MySQL Practice Starter Pack/
-
-│
-
-├── cadastro/
-
-│   └── DumpYYYYMMDD/
-
-│
-
-├── jmotors/
-
-│   └── DumpYYYYMMDD/
-
-│
-
-├── local\_cinema/
-
-│   └── DumpYYYYMMDD/
-
-│
-
-└── README.md
-
-# 
-
-#### 🔹 Organização
-
-
-
-&nbsp;- Cada pasta raiz representa um banco de dados diferente
-
-
-
 &nbsp;- Dentro de cada banco, os dumps são organizados por data de criação
 
 
@@ -63,7 +24,6 @@ MySQL Practice Starter Pack/
 ###### &nbsp;Praticar SQL na prática, não apenas teoria
 
 
-
 &nbsp;\* Trabalhar com:
 
 
@@ -73,7 +33,6 @@ MySQL Practice Starter Pack/
 &nbsp;
 
 &nbsp;\* Chaves primárias e estrangeiras
-
 
 
 &nbsp;\* JOINs
