@@ -1,4 +1,4 @@
-## \# Database Practice Starter Pack
+## \# SQL Practice Starter Pack
 
 # 
 
