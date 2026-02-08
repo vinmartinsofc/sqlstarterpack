@@ -30,7 +30,6 @@ Aqui estão armazenados \*\*dumps de bancos de dados\*\* utilizados em exercíci
 
 &nbsp;\* Modelagem relacional
 
-&nbsp;
 
 &nbsp;\* Chaves primárias e estrangeiras
 
