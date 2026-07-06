@@ -1,0 +1,212 @@
+--
+-- PostgreSQL database dump
+--
+
+\restrict lyhLIDrNalChylxm6fBBs6fygPJQB0o1K3f0FkgG06oG574HshDExHdECvuxQs4
+
+-- Dumped from database version 18.4 (Ubuntu 18.4-0ubuntu0.26.04.1)
+-- Dumped by pg_dump version 18.4 (Ubuntu 18.4-0ubuntu0.26.04.1)
+
+-- Started on 2026-07-06 16:06:08 -03
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- TOC entry 220 (class 1259 OID 16691)
+-- Name: titles; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.titles (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    release_date integer NOT NULL,
+    category character varying(50) NOT NULL,
+    genre character varying(50) NOT NULL,
+    director character varying(255),
+    duration integer,
+    creator character varying(255),
+    new_seasons boolean
+);
+
+
+ALTER TABLE public.titles OWNER TO postgres;
+
+--
+-- TOC entry 219 (class 1259 OID 16690)
+-- Name: titles_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.titles_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE public.titles_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 3517 (class 0 OID 0)
+-- Dependencies: 219
+-- Name: titles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.titles_id_seq OWNED BY public.titles.id;
+
+
+--
+-- TOC entry 3360 (class 2604 OID 16694)
+-- Name: titles id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.titles ALTER COLUMN id SET DEFAULT nextval('public.titles_id_seq'::regclass);
+
+
+--
+-- TOC entry 3511 (class 0 OID 16691)
+-- Dependencies: 220
+-- Data for Name: titles; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.titles (id, name, release_date, category, genre, director, duration, creator, new_seasons) FROM stdin;
+1	1917	2019	MOVIE	WAR	Sam Mendes	119	\N	\N
+2	Pluribus	2025	SERIES	SCI-FI/DYSTOPIAN	\N	\N	Vince Gilligan	t
+3	1917	2019	Movie	War	Sam Mendes	119	\N	\N
+4	2001: A Space Odyssey	1968	Movie	Sci-Fi	Stanley Kubrick	149	\N	\N
+5	Anaconda	2025	Movie	Comedy	Tom Gormican	99	\N	\N
+6	Apocalypse Now	1979	Movie	War	Francis Ford Coppola	147	\N	\N
+7	Barbarian	2022	Movie	Horror	Zach Cregger	102	\N	\N
+8	Body Snatchers	1993	Movie	Horror	Abel Ferrara	87	\N	\N
+9	Carrie	1976	Movie	Horror	Brian De Palma	98	\N	\N
+10	Creature from the Black Lagoon	1954	Movie	Horror	Jack Arnold	79	\N	\N
+11	Daredevil (Director's Cut)	2003	Movie	Action	Mark Steven Johnson	133	\N	\N
+12	Dr. Strangelove or How I Learned to Stop Worrying and Love the Bomb	1964	Movie	Comedy	Stanley Kubrick	95	\N	\N
+13	Dunkirk	2017	Movie	War	Christopher Nolan	106	\N	\N
+14	Fallen	1998	Movie	Thriller	Gregory Hoblit	124	\N	\N
+15	Fantastic Beasts: The Secrets of Dumbledore	2022	Movie	Fantasy	David Yates	142	\N	\N
+16	Full Metal Jacket	1987	Movie	War	Stanley Kubrick	116	\N	\N
+17	Halloween II	1981	Movie	Horror	Rick Rosenthal	92	\N	\N
+18	Hannibal	2001	Movie	Thriller	Ridley Scott	131	\N	\N
+19	Inception	2010	Movie	Sci-Fi	Christopher Nolan	148	\N	\N
+20	Jaws	1975	Movie	Thriller	Steven Spielberg	124	\N	\N
+21	Joker	2019	Movie	Drama	Todd Phillips	122	\N	\N
+22	Kill Bill: Vol. 1	2003	Movie	Action	Quentin Tarantino	111	\N	\N
+23	Masters of the Universe	2026	Movie	Fantasy	Travis Knight	140	\N	\N
+24	Megalopolis	2024	Movie	Sci-Fi	Francis Ford Coppola	138	\N	\N
+25	Morbius	2022	Movie	Action	Daniel Espinosa	104	\N	\N
+26	Napoleon	2023	Movie	History	Ridley Scott	158	\N	\N
+27	North by Northwest	1959	Movie	Thriller	Alfred Hitchcock	136	\N	\N
+28	Nosferatu	2024	Movie	Horror	Robert Eggers	132	\N	\N
+29	Oculus	2013	Movie	Horror	Mike Flanagan	104	\N	\N
+30	Once Upon a Time in Hollywood	2019	Movie	Drama	Quentin Tarantino	161	\N	\N
+31	Oppenheimer	2023	Movie	Drama	Christopher Nolan	180	\N	\N
+32	Paths of Glory	1957	Movie	War	Stanley Kubrick	88	\N	\N
+33	Planet of the Apes	1968	Movie	Sci-Fi	Franklin J. Schaffner	112	\N	\N
+34	Platoon	1986	Movie	War	Oliver Stone	120	\N	\N
+35	Predator: Badlands	2025	Movie	Sci-Fi	Dan Trachtenberg	107	\N	\N
+36	Psycho	1960	Movie	Horror	Alfred Hitchcock	109	\N	\N
+37	Pulp Fiction	1994	Movie	Crime	Quentin Tarantino	154	\N	\N
+38	Puppet Master	1989	Movie	Horror	David Schmoeller	90	\N	\N
+39	Raging Bull	1980	Movie	Drama	Martin Scorsese	129	\N	\N
+40	Rear Window	1954	Movie	Thriller	Alfred Hitchcock	112	\N	\N
+41	Reservoir Dogs	1992	Movie	Crime	Quentin Tarantino	99	\N	\N
+42	Rope	1948	Movie	Thriller	Alfred Hitchcock	80	\N	\N
+43	Rosemary's Baby	1968	Movie	Horror	Roman Polanski	137	\N	\N
+44	Saving Private Ryan	1998	Movie	War	Steven Spielberg	169	\N	\N
+45	Scanners	1981	Movie	Horror	David Cronenberg	103	\N	\N
+46	Scarface	1983	Movie	Crime	Brian De Palma	170	\N	\N
+47	Shutter Island	2010	Movie	Thriller	Martin Scorsese	138	\N	\N
+48	Spartacus	1960	Movie	History	Stanley Kubrick	197	\N	\N
+49	Suspiria	1977	Movie	Horror	Dario Argento	92	\N	\N
+50	Taxi Driver	1976	Movie	Crime	Martin Scorsese	114	\N	\N
+51	The Birds	1963	Movie	Horror	Alfred Hitchcock	119	\N	\N
+52	The Blob	1988	Movie	Horror	Chuck Russell	95	\N	\N
+53	The Deer Hunter	1978	Movie	War	Michael Cimino	183	\N	\N
+54	The Departed	2006	Movie	Crime	Martin Scorsese	151	\N	\N
+55	The Exorcist	1973	Movie	Horror	William Friedkin	122	\N	\N
+56	The Fantastic Four: First Steps	2025	Movie	Sci-Fi	Matt Shakman	\N	\N	\N
+57	The Fly	1986	Movie	Horror	David Cronenberg	96	\N	\N
+58	The Fly II	1989	Movie	Horror	Chris Walas	105	\N	\N
+59	The Green Mile	1999	Movie	Drama	Frank Darabont	189	\N	\N
+60	The Innocents	1961	Movie	Horror	Jack Clayton	100	\N	\N
+61	The Punisher	2004	Movie	Action	Jonathan Hensleigh	124	\N	\N
+62	The Rite	2011	Movie	Horror	Mikael Håfström	114	\N	\N
+63	The Ritual	2017	Movie	Horror	David Bruckner	94	\N	\N
+64	The Silence of the Lambs	1991	Movie	Thriller	Jonathan Demme	118	\N	\N
+65	The Sum of All Fears	2002	Movie	Thriller	Phil Alden Robinson	124	\N	\N
+66	The Texas Chainsaw Massacre	1974	Movie	Horror	Tobe Hooper	83	\N	\N
+67	The Thing	1982	Movie	Horror	John Carpenter	109	\N	\N
+68	The Wicker Man	1973	Movie	Horror	Robin Hardy	88	\N	\N
+69	The Witch	2015	Movie	Horror	Robert Eggers	92	\N	\N
+70	Triangle	2009	Movie	Horror	Christopher Smith	99	\N	\N
+71	Vertigo	1958	Movie	Thriller	Alfred Hitchcock	128	\N	\N
+72	Videodrome	1983	Movie	Horror	David Cronenberg	87	\N	\N
+73	Village of the Damned	1995	Movie	Horror	John Carpenter	99	\N	\N
+74	What Ever Happened to Baby Jane?	1962	Movie	Thriller	Robert Aldrich	134	\N	\N
+75	Zodiac	2007	Movie	Thriller	David Fincher	157	\N	\N
+76	The Outer Limits	1995	Series	Sci-Fi	Leslie Stevens	\N	\N	\N
+77	A Marvel Television Special Presentation: The Punisher - One Last Kill	2026	Movie	Action	Reinaldo Marcus Green	48	\N	\N
+78	Braveheart	1995	Movie	War	Mel Gibson	178	\N	\N
+79	Cube	1997	Movie	Horror	Vincenzo Natali	90	\N	\N
+80	Eyes Wide Shut	1999	Movie	Drama	Stanley Kubrick	159	\N	\N
+81	Halloween	1978	Movie	Horror	John Carpenter	91	\N	\N
+82	Hellfire	2026	Movie	Horror	Isaac Florentine	95	\N	\N
+83	Hokum	2026	Movie	Horror	Damian McCarthy	107	\N	\N
+84	Invasion of the Body Snatchers	1978	Movie	Sci-Fi	Philip Kaufman	115	\N	\N
+85	Nightcrawler	2014	Movie	Thriller	Dan Gilroy	117	\N	\N
+86	Obsession	2025	Movie	Thriller	Curry Barker	108	\N	\N
+87	Project Hail Mary	2026	Movie	Sci-Fi	Phil Lord, Christopher Miller	156	\N	\N
+88	The Babadook	2014	Movie	Horror	Jennifer Kent	94	\N	\N
+89	The Blair Witch Project	1999	Movie	Horror	Daniel Myrick, Eduardo Sánchez	81	\N	\N
+90	The Invasion	2007	Movie	Sci-Fi	Oliver Hirschbiegel	99	\N	\N
+91	The Northman	2022	Movie	Action	Robert Eggers	137	\N	\N
+92	The Shining	1980	Movie	Horror	Stanley Kubrick	146	\N	\N
+93	Vampires	1998	Movie	Horror	John Carpenter	108	\N	\N
+94	All Quiet on the Western Front	2022	Movie	War	Edward Berger	148	\N	\N
+95	The Penguin	2024	Series	Crime	\N	\N	Lauren LeFranc	t
+96	Spider-Man Noir	2026	Series	Action	\N	\N	\N	t
+\.
+
+
+--
+-- TOC entry 3518 (class 0 OID 0)
+-- Dependencies: 219
+-- Name: titles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.titles_id_seq', 96, true);
+
+
+--
+-- TOC entry 3362 (class 2606 OID 16703)
+-- Name: titles titles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.titles
+    ADD CONSTRAINT titles_pkey PRIMARY KEY (id);
+
+
+-- Completed on 2026-07-06 16:06:09 -03
+
+--
+-- PostgreSQL database dump complete
+--
+
+\unrestrict lyhLIDrNalChylxm6fBBs6fygPJQB0o1K3f0FkgG06oG574HshDExHdECvuxQs4
+
